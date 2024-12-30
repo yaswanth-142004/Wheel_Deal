@@ -5,8 +5,8 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue,
-  } from "@/components/ui/select"
-  import { Separator } from "@/components/ui/separator"
+  } from "@/components/select"
+  import { Separator } from "@/components/separator"
   import { CiSearch } from "react-icons/ci";
 import Data from '@/Shared/Data';
 
