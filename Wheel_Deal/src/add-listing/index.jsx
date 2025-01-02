@@ -5,6 +5,9 @@ import InputField from './components/InputField';
 import Dropdown from './components/Dropdown';
 import TextArea from './components/TextArea';
 import { Separator } from '@radix-ui/react-select';
+import features from '../Shared/features.json';
+import { Checkbox } from "@/components/ui/checkbox"
+
 
 const AddListing = () => {
   return (
@@ -34,9 +37,18 @@ const AddListing = () => {
                 {/* features list  */}
 
                 <div>
-                <Separator/>
+                <Separator className='my-6'/>
 
                     <h2 className='font-medium text-xl my-6'>Features </h2>
+                    <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>
+                        {features.features.map((item,index)=>(
+                            <div key = {index} className='flex gap-2 items-center'> <Checkbox />
+                            <h2>{item.label}</h2>
+</div>
+
+                        ))}
+
+                    </div>
                 </div>
 
                 {/* car images  */}
